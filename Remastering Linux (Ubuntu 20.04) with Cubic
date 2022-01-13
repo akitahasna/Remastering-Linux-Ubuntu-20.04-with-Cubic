@@ -1,0 +1,74 @@
+Install Remastering Ubuntu 20.04 dengan Cubic terlebih dahulu
+
+1. Install Cubic
+	sudo apt-add-repository ppa:cubic-wizard/release
+	sudo apt update
+	sudo apt install cubic
+
+2. Buat folder untuk Cubic
+	mkdir -p /home/akitahm/BM-Nux
+
+3. Buka Cubic, kemudian pilih folder Cubic yang telah dibuat sebelumnya, masukkan iso yang ingin di customize serta atur versi, nama, direktori, volume, id, release, dan disk name sesuai yang diinginkan.
+
+4. Install aplikasi
+	- Python 3.x
+		apt install python3
+    
+	- Apache Server
+		apt install apache2
+    
+	- Dia Diagram Editor
+		apt install dia
+    
+	- Scilab
+		apt install scilab
+    
+	- Multimedia Codecs
+		apt install ubuntu-restricted-extras
+    
+	- VLC media player
+		apt install vlc
+    
+	- Open Broadcaster Software (OBS)
+		apt install obs-studio
+    
+	- Blender
+		apt install blender
+    
+	- GimpShop
+		apt install gimp
+    
+	- OpenOffice
+		cd /opt
+		wget https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.7/binaries/en-US/Apache_OpenOffice_4.1.7_Linux_x86-64_install-deb_en-US.tar.gz/download
+		tar -xvf download
+		cd en-US/DEBS
+		sudo dpkg -i *.deb
+		cd desktop-integration
+		dpkg -i *.deb	
+		cd
+    
+	- Mendeley
+		wget https://desktop-download.mendeley.com/download/apt/pool/main/m/mendeleydesktop_1.19.4-stable_amd64.deb
+		dpkg -i mendeleydesktop_1.19.4-stable_amd64.deb
+		apt -f install
+
+  - Mengubah logo, wallpaper, dan tema
+	  a. Ubah logo
+      cd /usr/share/icons/hicolor/256x256/apps
+      buka gambar yang ingin dijadikan logo, drag+copy ke terminal
+      mv logobaru.png ubuntu-logo-icon.png
+      ls
+      cd
+	  b. Ubah wallpaper
+      cd /usr/share/backgrounds
+      buka gambar yg ingin dijadikan wallpaper, drag+copy ke terminal
+      mv wallpaperBaru.png warty-final-ubuntu.png
+      ls
+      cd
+	  c. Ubah tema
+		  apt install plymouth-themes
+
+6. Save & Generate
+
+7. Install file iso baru yang sudah dibuat
